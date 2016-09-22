@@ -52,25 +52,15 @@ extension UIColor {
         }
     }
     
-    public static func demo_colorWithHex(hex: Int, alpha: CGFloat = 1.0) -> UIColor {
+    public static func yzts_colorWithHex(hex: Int, alpha: CGFloat = 1.0) -> UIColor {
         return UIColor(hex: hex, alpha: alpha)!
     }
     
-    public static func demo_coloeWithHexString(hexString: String, alpha: CGFloat = 1.0) -> UIColor {
+    public static func yzts_colorWithHexString(hexString: String, alpha: CGFloat = 1.0) -> UIColor {
         return UIColor(hexString: hexString, alpha: alpha)!
     }
     
-    public static func demo_arc4randomColor(_ randomAlpha: Bool = false) -> UIColor {
-        let randomRed = CGFloat.random()
-        let randomGreen = CGFloat.random()
-        let randomBlue = CGFloat.random()
-        let alpha = randomAlpha ? CGFloat.random() : 1.0
-        return UIColor(r: randomRed, g: randomGreen, b: randomBlue, a: alpha)
-    }
-}
-
-fileprivate extension CGFloat {
-    static func random(_ lower: CGFloat = 0, _ upper: CGFloat = 1) -> CGFloat {
-        return CGFloat(Float(arc4random()) / Float(UINT32_MAX)) * (upper - lower) + lower
+    public static func yzts_arc4randomColor(_ randomAlpha: Bool = false) -> UIColor {
+        return UIColor(r: CGFloat(Float(arc4random()) / Float(UINT32_MAX)), g: CGFloat(Float(arc4random()) / Float(UINT32_MAX)), b: CGFloat(Float(arc4random()) / Float(UINT32_MAX)), a: (randomAlpha ? (CGFloat(Float(arc4random()) / Float(UINT32_MAX))) : 1.0))
     }
 }

@@ -16,8 +16,8 @@ class ViewController: UIViewController {
         let label = UILabel(frame: CGRect(x: 0, y: 64, width: 100, height: 20))
         self.view.addSubview(label)
         
-//        label.backgroundColor = UIColor.demo_colorWithHex(hex: 0xb9b9b9)
-        label.backgroundColor = UIColor.demo_coloeWithHexString(hexString: "#4a90e2")
+//        label.backgroundColor = UIColor.yzts_colorWithHex(hex: 0xb9b9b9)
+        label.backgroundColor = UIColor.yzts_colorWithHexString(hexString: "#4a90e2")
     }
 
     override func didReceiveMemoryWarning() {
